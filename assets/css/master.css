@@ -24,10 +24,6 @@ body {
     background-color: #32353b;
 }
 
-.hidden {
-  opacity: 0;
-}
-
 .console-container {
   font-family: logoFont;
   font-size: 3em;
