@@ -3,13 +3,13 @@
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
-  var visible = true;
   var con = document.getElementById('console');
   var letterCount = 1;
   var x = 1;
   var waiting = false;
   var target = document.getElementById(id)
   target.setAttribute('style', 'color:' + colors[0])
+
   window.setInterval(function() {
 
     if (letterCount === 0 && waiting === false) {
@@ -37,15 +37,17 @@ function consoleText(words, id, colors) {
       letterCount += x;
     }
   }, 120)
+
+  //blinking cursor effect
   window.setInterval(function() {
-    if (visible === true) {
-      con.className = 'console-underscore hidden'
-      visible = false;
-
-    } else {
-      con.className = 'console-underscore'
-
-      visible = true;
+    symbol = "_"
+    if(con.textContent === symbol)
+    {
+      con.textContent = "\u00A0" //character for white space
+    }
+    else
+    {
+      con.textContent = symbol
     }
   }, 400)
 }
