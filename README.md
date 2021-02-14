@@ -2,6 +2,7 @@
 This repositoy is created and maintained by the students of East Stroudsburg University's Computer Science Organization
 
 It represents the webpage to our [website](https://esucso.org/).
+
 Students are encouraged to create issues and contribute.
 
 ## How to contribute
