@@ -1,4 +1,8 @@
-# Development
+# CSO Website Project
+This repositoy is created and maintained by the students of East Stroudsburg University's Computer Science Organization
+
+It represents the webpage to our [website](https://esucso.org/).
+Students are encouraged to create issues and contribute.
 
 ## How to contribute
 1. Find an issue you want to fix.
