@@ -5,6 +5,10 @@ function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
   var con = document.getElementById('console');
   var letterCount = 1;
+  var funnyCatFrequency = 5;
+  var funnyCatCount = 0;
+  var funnyCat = 'FUNNY CAT TYPING';
+  var funnyCatColor = 'limegreen';
   var x = 1;
   var waiting = false;
   var target = document.getElementById(id)
@@ -16,10 +20,22 @@ function consoleText(words, id, colors) {
       waiting = true;
       target.innerHTML = words[0].substring(0, letterCount)
       window.setTimeout(function() {
-        var usedColor = colors.shift();
-        colors.push(usedColor);
-        var usedWord = words.shift();
-        words.push(usedWord);
+        funnyCatCount += 1;
+        if(funnyCatCount === funnyCatFrequency - 1){
+          colors.unshift(funnyCatColor);
+          words.unshift(funnyCat)
+        }
+        else{
+          if(words[0] === funnyCat){
+            colors.shift();
+            words.shift();
+            funnyCatCount = 0;
+          }
+          var usedColor = colors.shift();
+          colors.push(usedColor);
+          var usedWord = words.shift();
+          words.push(usedWord);
+        }
         x = 1;
         target.setAttribute('style', 'color:' + colors[0])
         letterCount += x;
