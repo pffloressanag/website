@@ -1,6 +1,10 @@
 # CSO Website Project
+
 This repository is created and maintained by the students of East Stroudsburg University's Computer Science Organization.
+
+
 This project represents the webpage to our [website](https://esucso.org/).
+
 ESU students or alumni can contact a CSO representative (link pending) if you are interesting in being added.
 
 
@@ -8,12 +12,14 @@ Students are encouraged to create [issues](https://github.com/esucsowt/website/i
 
 ## How to setup a development environment
 Either [Github Desktop](https://desktop.github.com/) or [Sourcetree](https://www.sourcetreeapp.com/) are good git-gui clients.
-Many different IDE's can be used. In the future this repo will use many different languages.
-Below are some common IDE's for each language.
+
+
+In the future this repo will use many different languages, below are some common IDE's for each language we currently use.
 
 #### Python 
   • [PyCharm](https://www.jetbrains.com/pycharm/)
   • [Spyder](spyder-ide.org)
+  • [VSCode](https://code.visualstudio.com/)
 
 #### HTML/JS/CSS
   • [WebStorm(student trial)](https://www.jetbrains.com/webstorm/)
