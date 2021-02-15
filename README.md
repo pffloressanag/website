@@ -31,5 +31,5 @@ In the future this repo will use many different languages, below are some common
 3. Create a branch to make your changes.
 4. Create a [pull request](https://github.com/esucsowt/website/pulls) for said branch to be merged into dev.
 5. Request the merge to be reviewed by a peer ([Chris](https://github.com/Criyl) or [Ryan](https://github.com/RyanSpadt) are examples if you cant think of anyone).
-6. After the changes are reviewed the code may be safely merged into main
+6. After the changes are reviewed the code may be safely merged into dev
 7. Feel accomplished
