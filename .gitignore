@@ -4,4 +4,4 @@
 *.sqlite3
 settings.py
 *.pyc
-website_project/django_project/settings.py
+.website_project/django_project/settings.py
