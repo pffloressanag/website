@@ -4,6 +4,8 @@ This repository is created and maintained by the students of East Stroudsburg Un
 
 This project represents the webpage to our [website](https://esucso.org/).
 
+The project is a great oppourtunity to hone key development skills and we wish to emulate a real development team as much as possible.
+
 ESU students or alumni can contact a CSO representative (link pending) if you are interesting in being added.
 
 Students are encouraged to create [issues](https://github.com/esucsowt/website/issues) and contribute.
@@ -31,5 +33,5 @@ In the future this repo will use many different languages, below are some common
 3. Create a branch to make your changes.
 4. Create a [pull request](https://github.com/esucsowt/website/pulls) for said branch to be merged into dev.
 5. Request the merge to be reviewed by a peer ([Chris](https://github.com/Criyl) or [Ryan](https://github.com/RyanSpadt) are examples if you cant think of anyone).
-6. After the changes are reviewed the code may be safely merged into main
+6. After the changes are reviewed the code may be safely merged into dev
 7. Feel accomplished
