@@ -57,11 +57,11 @@
                   <li class="nav-item"><a href="{% url 'home' %}">Home</a></li>
                   <li class="nav-item"><a href="#">Members</a></li>
                   <li class="nav-item"><a href="#">Events</a></li>
-                  <li class="nav-item"><a href="#">About Us</a></li>
+                  <li class="nav-item"><a href="{% url 'about' %}">About Us</a></li>
               {% else %}
                   <li class="nav-item"><a href="{% url 'home' %}">Home</a></li>
                   <li class="nav-item"><a href="#">Events</a></li>
-                  <li class="nav-item"><a href="#">About Us</a></li>
+                  <li class="nav-item"><a href="{% url 'about' %}">About Us</a></li>
               {% endif %}
           </ul>
 
