@@ -119,20 +119,41 @@ body {
   background-color: #39A0ED;
 }
 
-.navbar-nav.navbar-center li {
-  font-family: logoFont;
-  font-size: 200%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5px;
+.navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin:0 auto;
+    font-family: 'Lato', sans-serif;
+    font-size: 2em;
 }
 
-.navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  vertical-align: top;
+.navbar-nav li {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
 }
 
-.navbar .navbar-collapse {
-  text-align: center;
+.navbar-right {
+    margin-right: 5px;
 }
+
+.navbar-left {
+    margin-left: 5px;
+}
+
+
+/* Values if the screen width of media is small (phone screens) */
+@media (min-width: 767px) {
+  .navbar-nav.navbar-center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    float: none;
+    text-align: center;
+    padding: 8px 0;
+  }
+}
+

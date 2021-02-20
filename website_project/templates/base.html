@@ -10,6 +10,10 @@
 
     <!--  CSS  -->
     <link rel="stylesheet" href="{% static 'css/master.css' %}">
+
+    <!--  GOOGLE FONT  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -28,21 +32,47 @@
     </section>
 
     <section id="navigation-bar">
-      <nav class="navbar navbar-inverse navbar-expand-lg navbar-static-top">
-        <div class="container-fluid">
-          <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-elements">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-center" id="navbar-elements">
-              <ul class="nav navbar-nav navbar-center">
-                  <li class="nav-item"><a href="#">Home</a></li>
-                  <li class="nav-item"><a href="https://esucso.org/members/members-index.html">Members</a></li>
+      <nav class="navbar navbar-inverse navbar-expand-lg navbar-static-top" role="navigation">
+        <div class="navbar-header" style="padding-left: 10px">
+            <button class="pull-left navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-elements">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="navbar-elements">
+
+          <ul class="nav navbar-nav navbar-center">
+              <form class="form-inline">
+                  <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">
+                      <span class="glyphicon glyphicon-search"></span>
+                  </button>
+              </form>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-left">
+              {% if user.is_authenticated %}
+                  <li class="nav-item"><a href="{% url 'home' %}">Home</a></li>
+                  <li class="nav-item"><a href="#">Members</a></li>
                   <li class="nav-item"><a href="#">Events</a></li>
                   <li class="nav-item"><a href="#">About Us</a></li>
-              </ul>
-          </div>
+              {% else %}
+                  <li class="nav-item"><a href="{% url 'home' %}">Home</a></li>
+                  <li class="nav-item"><a href="#">Events</a></li>
+                  <li class="nav-item"><a href="#">About Us</a></li>
+              {% endif %}
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+              {% if user.is_authenticated %}
+                  <li class="nav-item"><a href="{% url 'accounts:logout' %}">Logout</a></li>
+              {% else %}
+                  <li class="nav-item"><a href="{% url 'accounts:login' %}">Log in</a></li>
+                  <li class="nav-item"><a href="{% url 'accounts:signup' %}">Sign up</a></li>
+              {% endif %}
+          </ul>
         </div>
       </nav>
       <div class="below-nav"></div>
