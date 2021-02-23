@@ -39,18 +39,31 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+
+            <form class="navbar-search">
+                <div class="form-group">
+                  <div class="input-group">
+                    <input class="form-control" name="search" placeholder="Search" autocomplete="off" autofocus="autofocus" type="text">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                       </span>
+                  </div>
+                </div>
+             </form>
         </div>
         
         <div class="collapse navbar-collapse" id="navbar-elements">
 
-          <ul class="nav navbar-nav navbar-center">
-              <form class="form-inline">
-                  <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">
-                      <span class="glyphicon glyphicon-search"></span>
-                  </button>
-              </form>
-          </ul>
+<!--          <ul class="nav navbar-nav navbar-center">-->
+<!--              <form class="form-inline">-->
+<!--                  <input class="form-control" type="search" placeholder="Search" aria-label="Search">-->
+<!--                  <button class="btn btn-outline-success" type="submit">-->
+<!--                      <span class="glyphicon glyphicon-search"></span>-->
+<!--                  </button>-->
+<!--              </form>-->
+<!--          </ul>-->
 
           <ul class="nav navbar-nav navbar-left">
               {% if user.is_authenticated %}

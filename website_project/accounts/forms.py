@@ -1,6 +1,8 @@
-from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import get_user_model, authenticate
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.core.exceptions import ValidationError
+from django import forms
+from django.contrib.auth.models import User
 
 
 # Make sure this class is not the same name as "UserCreationForm"
@@ -33,3 +35,29 @@ class UserCreateForm(UserCreationForm):
         super().__init__(*args, **kwargs)
         self.fields['username'].label = 'Display Name'
         self.fields['email'].label = 'Email Address'
+
+
+class LoginForm(AuthenticationForm):
+
+    def clean(self):
+        username = self.cleaned_data.get('username')
+        password = self.cleaned_data.get('password')
+
+        if username is not None and password:
+            self.user_cache = authenticate(self.request, username=username, password=password)
+            if self.user_cache is None:
+                try:
+                    user_temp = User.objects.get(username=username)
+                except:
+                    user_temp = None
+
+                if user_temp is not None and user_temp.check_password(password):
+                    self.confirm_login_allowed(user_temp)
+                else:
+                    raise forms.ValidationError(
+                        self.error_messages['invalid_login'],
+                        code='invalid_login',
+                        params={'username': self.username_field.verbose_name},
+                    )
+
+        return self.cleaned_data
