@@ -1,6 +1,43 @@
 /*
 *****************************
 *****************************
+*** CONTAINER ***************
+*****************************
+*****************************
+*/
+@media (min-width: 768px) {
+    .container-small {
+        width: 300px;
+    }
+    .container-large {
+        width: 970px;
+    }
+}
+@media (min-width: 992px) {
+    .container-small {
+        width: 500px;
+    }
+    .container-large {
+        width: 1170px;
+    }
+}
+@media (min-width: 1200px) {
+    .container-small {
+        width: 700px;
+    }
+    .container-large {
+        width: 1500px;
+    }
+}
+
+.container-small, .container-large {
+    max-width: 100%;
+}
+
+
+/*
+*****************************
+*****************************
 *** FONT ********************
 *****************************
 *****************************
@@ -119,41 +156,61 @@ body {
   background-color: #39A0ED;
 }
 
-.navbar-brand {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    text-align: center;
-    margin:0 auto;
-    font-family: 'Lato', sans-serif;
-    font-size: 2em;
-}
-
-.navbar-nav li {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.5em;
-}
-
 .navbar-right {
+    margin-left: 5px;
     margin-right: 5px;
 }
 
 .navbar-left {
     margin-left: 5px;
+    margin-right: 5px;
 }
 
-
-/* Values if the screen width of media is small (phone screens) */
-@media (min-width: 767px) {
-  .navbar-nav.navbar-center {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 100%;
-    float: none;
-    text-align: center;
-    padding: 8px 0;
+.navbar-search {
+  position: absolute;
+  width: 750px;
+  left      : 50%;
+  top       : 50%;
+  margin-top: 8px;
+  transform : translate(-50%, -50%);
+}
+@media (min-width: 1200px) {
+  .navbar-search {
+    max-width: 750px;
+  }
+  .navbar-nav li {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
   }
 }
-
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar-search {
+    max-width: 550px;
+    margin-left: 40px;
+  }
+  .navbar-nav li {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.25em;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-search {
+    max-width: 300px;
+    margin-left: 40px;
+  }
+  .navbar-nav li {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.25em;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-search {
+    margin-left: 60px;
+    padding-right: 75px;
+    max-width: 700px;
+    width: 100%;
+  }
+  .navbar-toggle {
+    z-index: 1060;
+  }
+}
