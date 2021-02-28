@@ -20,6 +20,7 @@ In the future this repo will use many different languages, below are some common
   • [PyCharm](https://www.jetbrains.com/pycharm/)
   • [Spyder](spyder-ide.org)
   • [VSCode](https://code.visualstudio.com/)
+  • [Sublime Text 3] (https://www.sublimetext.com/3)
 
 #### HTML/JS/CSS
   • [WebStorm(student trial)](https://www.jetbrains.com/webstorm/)
